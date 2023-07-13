@@ -4,24 +4,40 @@ class InfoCardContent extends StatelessWidget {
   final String? selectedBuyerDiv;
   final String? selectedStyleNumber;
   final String? selectedMeasureStage;
+  final String? selectedType;
+  final String? selectedStandard;
+
   final List<String> buyerDivItems;
   final List<String> styleNumber;
   final List<String> measurestageitems;
+  final List<String> typeitems;
+  final List<String> aqlitems;
+
   final ValueChanged<String?> onBuyerDivChanged;
   final ValueChanged<String?> onStyleNumberChanged;
   final ValueChanged<String?> onMeasureStageChanged;
+  final ValueChanged<String?> onMeasureTypeChanged;
+  final ValueChanged<String?> onMeasureStandardChanged;
 
   const InfoCardContent({
     Key? key,
     required this.selectedBuyerDiv,
     required this.selectedStyleNumber,
     required this.selectedMeasureStage,
+    required this.selectedType,
+    required this.selectedStandard,
+
     required this.buyerDivItems,
     required this.styleNumber,
     required this.measurestageitems,
     required this.onBuyerDivChanged,
+    required this.typeitems,
+    required this.aqlitems,
+
     required this.onStyleNumberChanged,
     required this.onMeasureStageChanged,
+    required this.onMeasureTypeChanged,
+    required this.onMeasureStandardChanged,
   }) : super(key: key);
 
   @override

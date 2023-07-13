@@ -18,17 +18,16 @@ class _SplashState extends State<Splash> {
   String? selectedBuyerDiv;
   String? selectedStyleNumber;
   String? selectedMeasureStage;
+  String? selectedType;
+  String? selectedStandard;
 
 
   List<String> buyerdivitems = ['ARROWMT', 'BRMT', 'TALBB'];
-  List<String> stylenumber = [
-    'ATF SUM22 SAMPLING/31477',
-    '612737 / 33886',
-    'Option 3'
-  ];
+  List<String> stylenumber = ['ATF SUM22 SAMPLING/31477', '612737 / 33886', 'Option 3'];
   List<String> measurestageitems = ['Stage 1', 'Stage 2', 'Stage 3'];
   List<String> typeitems = ['Type 1', 'Type 2', 'Type 3'];
   List<String> aqlitems = ['Standard 1', 'Standard 2', 'Standard 3'];
+
 
   @override
   Widget build(BuildContext context) {
@@ -76,9 +75,15 @@ class _SplashState extends State<Splash> {
             selectedBuyerDiv: selectedBuyerDiv,
             selectedStyleNumber: selectedStyleNumber,
             selectedMeasureStage: selectedMeasureStage,
+            selectedType: selectedType,
+            selectedStandard:selectedStandard,
+
             buyerDivItems: buyerdivitems,
             styleNumber: stylenumber,
             measurestageitems: measurestageitems,
+            typeitems:typeitems,
+              aqlitems:aqlitems,
+
             onBuyerDivChanged: (String? newValue) {
               setState(() {
                 selectedBuyerDiv = newValue;
@@ -92,6 +97,14 @@ class _SplashState extends State<Splash> {
             onMeasureStageChanged: (String? newValue) {
               setState(() {
                 selectedMeasureStage = newValue;
+              });
+            },  onMeasureTypeChanged: (String? newValue) {
+              setState(() {
+                selectedType = newValue;
+              });
+            },  onMeasureStandardChanged: (String? newValue) {
+              setState(() {
+                selectedStandard = newValue;
               });
             },
           ),
